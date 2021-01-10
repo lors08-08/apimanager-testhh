@@ -1,0 +1,87 @@
+{
+  "users": [
+    {
+      "email": "jon123@icloud.com",
+      "name": "Джон",
+      "surname": "Доу",
+      "number": "+1 (123) 123-12-12",
+      "aboutMe": "Я из США и живу в США:)",
+      "id": 1
+    },
+    {
+      "email": "alex123@icloud.com",
+      "name": "Алекс",
+      "surname": "Бронс",
+      "number": "+1 (123) 123-12-12",
+      "aboutMe": "Я из Британии и живу в Британии:)",
+      "id": 2
+    },
+    {
+      "email": "sasha123@icloud.com",
+      "name": "Саша",
+      "surname": "Воронин",
+      "number": "+1 (123) 123-12-12",
+      "aboutMe": "Я из России и живу в России:)",
+      "id": 3
+    },
+    {
+      "email": "miha123@icloud.com",
+      "name": "Михаил",
+      "surname": "Воля",
+      "number": "+1 (123) 123-12-12",
+      "aboutMe": "Я из Украины и живу в Украине:)",
+      "id": 4
+    }
+  ],
+  "apis": [
+    {
+      "id": 1,
+      "title": "Котофакты",
+      "description": "Думаешь знаешь все о своем любимом питомце? Зайди и узнай много новых фактов",
+      "img": "https://i.pinimg.com/originals/7e/ed/69/7eed691e3c0686633626c78b97ef508b.jpg",
+      "src": "https://cat-fact.herokuapp.com/facts/random"
+    },
+    {
+      "id": 2,
+      "title": "Во Все Тяжкие - цитаты",
+      "description": "Узнай или вспомни цитаты из любимого всеми сериала - Во все тяжкие",
+      "img": "https://st4.depositphotos.com/11095424/23545/i/1600/depositphotos_235451952-stock-photo-walter-white-breaking-bad-character.jpg",
+      "src": "https://breaking-bad-quotes.herokuapp.com/v1/quotes"
+    },
+    {
+      "id": 3,
+      "title": "Астрономическое фото дня от НАСА",
+      "description": "Лучший снимок дня от телескопа ХАБЛ, по версии НАСА",
+      "img": "https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png",
+      "src": "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
+    },
+    {
+      "id": 4,
+      "title": "Фото Лис",
+      "description": "Получи рандомную фотку лисы",
+      "img": "https://i.pinimg.com/originals/16/de/5f/16de5f8dd1ffe99f9e169a0605a960b3.png",
+      "src": "https://randomfox.ca/floof/"
+    },
+    {
+      "id": 5,
+      "title": "Рандомные гифки и фотки собак",
+      "description": "Получить рандомную гифку или фото собак",
+      "img": "https://i.pinimg.com/originals/07/de/bd/07debd3c60f7e252e42fa76f516624e5.png",
+      "src": "https://random.dog/woof.json"
+    },
+    {
+      "id": 6,
+      "title": "Факты о Чак Норрисе",
+      "description": "Получи рандомный факт о Чак Норрисе!",
+      "img": "https://www.pngkey.com/png/detail/110-1104421_chuck-norris-facts-have-spread-around-the-world.png",
+      "src": "https://api.chucknorris.io/jokes/random"
+    }
+  ],
+  "authorization": [
+    {
+      "login": "admin",
+      "password": "admin",
+      "token": "sdasd213213@#"
+    }
+  ]
+}
