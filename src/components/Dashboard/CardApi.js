@@ -7,6 +7,10 @@ import CardContent from "@material-ui/core/CardContent";
 import Typography from "@material-ui/core/Typography";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
+import { useDispatch } from "react-redux";
+import { selectApi } from "../../redux/actions";
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -25,6 +29,13 @@ const useStyles = makeStyles(() => ({
 
 function CardApi({ api }) {
   const classes = useStyles();
+  const history = useHistory();
+  const dispatch = useDispatch();
+
+  const handleSelect = () => {
+    dispatch(selectApi(api.src));
+    history.push(`/dashboard/api-info/${api.id}`);
+  };
 
   return (
     <Card className={classes.root}>
@@ -40,7 +51,7 @@ function CardApi({ api }) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button onClick={handleSelect} size="small" color="primary">
           Узнать больше
         </Button>
       </CardActions>

@@ -28,6 +28,20 @@ export function loadApis() {
   };
 }
 
+export function selectApi(src) {
+  return (dispatch) => {
+    dispatch({ type: "apis/select/start" });
+    fetch(src)
+      .then((response) => response.json())
+      .then((json) => {
+        dispatch({
+          type: "apis/select/succeed",
+          payload: json,
+        });
+      });
+  };
+}
+
 export function startLogIn(login, pass) {
   return (dispatch) => {
     dispatch({ type: "admin/login/start" });

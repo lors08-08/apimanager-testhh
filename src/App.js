@@ -8,6 +8,21 @@ import {
   Redirect,
   Route,
 } from "react-router-dom";
+import { ThemeProvider } from "@material-ui/styles";
+import createMuiTheme from "@material-ui/core/styles/createMuiTheme";
+
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#f44343",
+      contrastText: "#ffffff",
+    },
+    secondary: {
+      main: "#ffffff",
+      contrastText: "#000000",
+    },
+  },
+});
 
 function App() {
   const token = useSelector((state) => state.logging.token);
@@ -32,7 +47,9 @@ function App() {
 
   return (
     <Router>
-      <div>{routes}</div>
+      <ThemeProvider theme={theme}>
+        <div>{routes}</div>
+      </ThemeProvider>
     </Router>
   );
 }

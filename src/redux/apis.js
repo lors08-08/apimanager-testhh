@@ -2,6 +2,7 @@ const initialState = {
   loading: false,
   searchValue: "",
   items: [],
+  currentItem: {},
 };
 
 function apis(state = initialState, action) {
@@ -15,6 +16,17 @@ function apis(state = initialState, action) {
       return {
         ...state,
         items: action.payload,
+        loading: false,
+      };
+    case "apis/select/start":
+      return {
+        ...state,
+        loading: true,
+      };
+    case "apis/select/succeed":
+      return {
+        ...state,
+        currentItem: action.payload,
         loading: false,
       };
     case "apis/setSearchValue": {
