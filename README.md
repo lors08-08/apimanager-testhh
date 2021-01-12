@@ -1,1 +1,11 @@
-https://apimanager-lors.herokuapp.com/login
+Приложение предоставляет информацию по открытым API,показывают примиер данных получаемых с конкретного запроса, позволяет добавлять полтзователей, с уникальным набором API, также есть возможность авторизации.
+#### [Демо](https://apimanager-lors.herokuapp.com)   
+
+## При разработке использовал:
+* redux / redux-thunk для организации стейта / localStorage;
+* Material Ui, iconify, normalize.css;
+* react-router-dom для роутинга;
+* REST API, асинхронные запросы, json-server (специально для приложения был написан небольшой backend);
+* а также хуки, concurrently, redux-logger, функциональные компоненты;
+
+
