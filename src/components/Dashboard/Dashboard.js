@@ -18,7 +18,6 @@ function Dashboard() {
   const shuffled = apis.sort(() => 0.5 - Math.random());
   let selected = shuffled.slice(0, 3);
 
-  console.log("mounted");
   return (
     <>
       <Grid item container>

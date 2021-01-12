@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import DialogActions from "@material-ui/core/DialogActions";
-import Button from "@material-ui/core/Button";
 import TextField from "@material-ui/core/TextField";
 import DialogContent from "@material-ui/core/DialogContent";
 import Dialog from "@material-ui/core/Dialog";
@@ -8,6 +7,7 @@ import DialogTitle from "@material-ui/core/DialogTitle";
 import makeStyles from "@material-ui/core/styles/makeStyles";
 import { useDispatch, useSelector } from "react-redux";
 import { startLogIn } from "../../redux/actions";
+import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles(() => ({
   root: {
@@ -27,13 +27,7 @@ const useStyles = makeStyles(() => ({
     margin: "auto",
     "& button": {
       fontSize: "24px",
-      fontWeight: "700",
-      backgroundColor: "#1976d2",
-      width: "150px",
-      color: "white",
-      "&:hover": {
-        backgroundColor: "#0056ab",
-      },
+      padding: "10px 30px 10px 30px",
     },
   },
   error: {
@@ -65,7 +59,7 @@ function LogInPage() {
   };
   const handleLogIn = () => {
     if (login.length && pass.length > 1) {
-      dispatch(startLogIn(login, pass));
+      dispatch(startLogIn());
       setLengthError(false);
     } else {
       setLengthError(true);
@@ -111,7 +105,7 @@ function LogInPage() {
           </div>
         )}
         <DialogActions className={classes.login}>
-          <Button onClick={handleLogIn} color="primary">
+          <Button onClick={handleLogIn} variant="outlined" color="primary">
             Вход
           </Button>
         </DialogActions>

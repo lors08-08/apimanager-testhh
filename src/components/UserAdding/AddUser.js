@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Fab from "@material-ui/core/Fab";
-import AddIcon from "@material-ui/icons/Add";
-import { Typography } from "@material-ui/core";
 import DialogContent from "@material-ui/core/DialogContent";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import Dialog from "@material-ui/core/Dialog";
@@ -31,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function AddUser(props) {
+function AddUser() {
   const classes = useStyles();
   const history = useHistory();
   const loading = useSelector((state) => state.users.loading);
@@ -63,7 +60,7 @@ function AddUser(props) {
     history.push("/dashboard");
   };
   const handleAdd = () => {
-    if (mail.length && name.length && surName.length && num.length > 5) {
+    if (mail.length && name.length && surName.length && num.length > 3) {
       dispatch(addUser(mail, name, surName, num, aboutMe));
       history.push("/dashboard");
     }
@@ -79,11 +76,9 @@ function AddUser(props) {
           Информация о пользователе
         </DialogTitle>
         <DialogContent>
-          {false && (
-            <DialogContentText color="primary">
-              *Заполните все поля
-            </DialogContentText>
-          )}
+          <DialogContentText color="primary">
+            *Заполните все поля
+          </DialogContentText>
           <TextField
             value={mail}
             onChange={handleMail}

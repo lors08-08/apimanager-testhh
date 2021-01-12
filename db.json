@@ -1,37 +1,6 @@
 {
   "users": [
-    {
-      "email": "jon123@icloud.com",
-      "name": "Джон",
-      "surname": "Доу",
-      "number": "+1 (123) 123-12-12",
-      "aboutMe": "Я из США и живу в США:)",
-      "id": 1
-    },
-    {
-      "email": "alex123@icloud.com",
-      "name": "Алекс",
-      "surname": "Бронс",
-      "number": "+1 (123) 123-12-12",
-      "aboutMe": "Я из Британии и живу в Британии:)",
-      "id": 2
-    },
-    {
-      "email": "sasha123@icloud.com",
-      "name": "Саша",
-      "surname": "Воронин",
-      "number": "+1 (123) 123-12-12",
-      "aboutMe": "Я из России и живу в России:)",
-      "id": 3
-    },
-    {
-      "email": "miha123@icloud.com",
-      "name": "Михаил",
-      "surname": "Воля",
-      "number": "+1 (123) 123-12-12",
-      "aboutMe": "Я из Украины и живу в Украине:)",
-      "id": 4
-    }
+
   ],
   "apis": [
     {

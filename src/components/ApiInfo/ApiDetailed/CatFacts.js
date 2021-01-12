@@ -1,11 +1,30 @@
 import React from "react";
-import { useParams } from "react-router-dom";
 import { Grid } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    "& > *": {
+      margin: theme.spacing(1),
+    },
+    textAlign: "center",
+  },
+  fact: {
+    fontSize: "21px",
+  },
+}));
 
 function CatFacts({ api }) {
+  const classes = useStyles();
+
   return (
-    <Grid item container justify="center">
-      <h1>cat</h1>
+    <Grid className={classes.root} item container>
+      <Grid item xs="12">
+        <h1>Котофакт</h1>
+      </Grid>
+      <Grid className={classes.fact} item xs="12">
+        <b>А вы знали? - </b> <q>{api.text}</q>
+      </Grid>
     </Grid>
   );
 }

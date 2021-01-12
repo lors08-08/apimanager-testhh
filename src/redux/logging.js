@@ -5,7 +5,6 @@ const initialState = {
   token: localStorage.getItem("auth-token"),
 
   authorizing: false,
-  error: false,
 };
 
 function logging(state = initialState, action) {
@@ -14,24 +13,12 @@ function logging(state = initialState, action) {
       return {
         ...state,
         authorizing: true,
-        error: false,
       };
     case "admin/login/succeed":
       return {
         ...state,
         ...action.payload[0],
         authorizing: false,
-      };
-    case "admin/login/failed":
-      return {
-        ...state,
-        authorizing: false,
-        error: true,
-      };
-    case "admin/logout":
-      return {
-        ...state,
-        token: null,
       };
     default:
       return state;

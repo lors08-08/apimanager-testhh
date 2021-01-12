@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-function AddUserIcon(props) {
+function AddUserIcon() {
   const classes = useStyles();
 
   return (

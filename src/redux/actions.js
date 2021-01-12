@@ -42,24 +42,18 @@ export function selectApi(src) {
   };
 }
 
-export function startLogIn(login, pass) {
+export function startLogIn() {
   return (dispatch) => {
     dispatch({ type: "admin/login/start" });
 
-    fetch(`http://localhost:3010/authorization?login=${login}&password=${pass}`)
+    fetch("http://localhost:3010/authorization")
       .then((response) => response.json())
       .then((json) => {
-        if (json.length) {
-          localStorage.setItem("auth-token", json.token);
-          dispatch({
-            type: "admin/login/succeed",
-            payload: json,
-          });
-        } else {
-          dispatch({
-            type: "admin/login/failed",
-          });
-        }
+        localStorage.setItem("auth-token", json.token);
+        dispatch({
+          type: "admin/login/succeed",
+          payload: json,
+        });
       });
   };
 }
@@ -72,13 +66,6 @@ export function setSearchValue(value) {
     });
   };
 }
-
-// export function logout() {
-//   localStorage.removeItem("auth-token");
-//   return (dispatch) => {
-//     dispatch({ type: "admin/logout" });
-//   };
-// }
 
 export function addUser(email, name, surname, number, aboutMe) {
   return (dispatch) => {

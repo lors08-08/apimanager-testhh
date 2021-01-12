@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Grid } from "@material-ui/core";
-import Header from "./Header";
+import Header from "./Header/Header";
 import Dashboard from "./Dashboard/Dashboard";
 import { useDispatch, useSelector } from "react-redux";
 import { loadApis, loadUsers } from "../redux/actions";
@@ -9,7 +9,7 @@ import AddUser from "./UserAdding/AddUser";
 import { Redirect, Route, Switch } from "react-router-dom";
 import ApiInfo from "./ApiInfo/ApiInfo";
 
-function MainPage(props) {
+function MainPage() {
   const dispatch = useDispatch();
   const loadingUsers = useSelector((state) => state.users.loading);
   const loadingApis = useSelector((state) => state.apis.loading);
