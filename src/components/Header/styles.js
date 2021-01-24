@@ -92,4 +92,12 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     fontSize: "1.5em",
   },
+  logout: {
+    textDecoration: "none",
+    color:"black",
+    "& svg":{
+      fontSize:"32px"
+    }
+  }
+
 }));

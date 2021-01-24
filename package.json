@@ -1,6 +1,8 @@
 {
   "name": "apimanager-testhh",
   "version": "0.1.0",
+  "proxy": "http://localhost:3010",
+  "homepage": "./",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.2",

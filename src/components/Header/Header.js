@@ -5,6 +5,7 @@ import MoreIcon from "@material-ui/icons/MoreVert";
 import { useDispatch, useSelector } from "react-redux";
 import { setSearchValue, switchUser } from "../../redux/actions";
 import { Link } from "react-router-dom";
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import {
   ButtonGroup,
   AppBar,
@@ -83,6 +84,9 @@ function Header() {
           </div>
         );
       })}
+      <a className={classes.logout} href="/" onClick={()=>localStorage.removeItem("auth-token")}>
+        <ExitToAppIcon />
+      </a>
     </Menu>
   );
 
@@ -128,6 +132,9 @@ function Header() {
                 {currentUser.name[0]}
               </Avatar>
             </IconButton>
+            <a className={classes.logout} href="/" onClick={()=>localStorage.removeItem("auth-token")}>
+              <ExitToAppIcon />
+            </a>
           </div>
           <div className={classes.sectionMobile}>
             <IconButton

@@ -2,7 +2,7 @@ export function loadUsers() {
   return (dispatch) => {
     dispatch({ type: "users/load/start" });
 
-    fetch("http://localhost:3010/users")
+    fetch("/users")
       .then((response) => response.json())
       .then((json) => {
         dispatch({
@@ -17,7 +17,7 @@ export function loadApis() {
   return (dispatch) => {
     dispatch({ type: "apis/load/start" });
 
-    fetch("http://localhost:3010/apis")
+    fetch("/apis")
       .then((response) => response.json())
       .then((json) => {
         dispatch({
@@ -46,7 +46,7 @@ export function startLogIn() {
   return (dispatch) => {
     dispatch({ type: "admin/login/start" });
 
-    fetch("http://localhost:3010/authorization")
+    fetch("/authorization")
       .then((response) => response.json())
       .then((json) => {
         localStorage.setItem("auth-token", json.token);
@@ -70,7 +70,7 @@ export function setSearchValue(value) {
 export function addUser(email, name, surname, number, aboutMe) {
   return (dispatch) => {
     dispatch({ type: "users/add/start" });
-    fetch("http://localhost:3010/users", {
+    fetch("/users", {
       method: "POST",
       headers: {
         Accept: "application/json",

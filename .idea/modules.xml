@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/apimanager-testhh.iml" filepath="$PROJECT_DIR$/.idea/apimanager-testhh.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../todoapp/.idea/todoapp.iml" filepath="$PROJECT_DIR$/../todoapp/.idea/todoapp.iml" />
     </modules>
   </component>
 </project>
